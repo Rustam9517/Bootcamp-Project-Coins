@@ -6,9 +6,15 @@ $font-style: Roboto,sans-serif;
   .coins-pages-image{
     position: relative;
     max-height: 450px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    perspective:1000px;
     img{
       max-width: 450px;
       max-height: 450px;
+    }
+    .front, .reverse{
+      backface-visibility:hidden;
     }
     .reverse{
       position: absolute;
@@ -18,10 +24,13 @@ $font-style: Roboto,sans-serif;
       display: none;
     }
   }
+  .coins-pages-image:hover .front{
+    transform:rotateY(0deg);
+  }
   .coins-pages-image:hover .reverse{
     display: inline;
+    transform: rotateY(360deg);
   }
-
   .coins-pages-text{
     padding: 12px 44px 12px 47px;
     background: rgba(196, 196, 196, 0.5);
@@ -108,12 +117,14 @@ $font-style: Roboto,sans-serif;
 @media (min-width: 768px) and (max-width: 1050px) {
   .coins-pages-main{
     display: flex;
-    flex-direction: column;
     .coins-pages-image{
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin: 0 auto;
       width: 100%;
       img{
-        width: 50%;
+        object-fit: cover;
       }
     }
     .coins-pages-text{

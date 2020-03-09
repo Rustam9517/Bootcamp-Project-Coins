@@ -6,18 +6,34 @@
   margin: 0 auto; }
   .coins-pages-main .coins-pages-image {
     position: relative;
-    max-height: 450px; }
+    max-height: 450px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    -webkit-perspective: 1000px;
+    perspective: 1000px; }
     .coins-pages-main .coins-pages-image img {
       max-width: 450px;
       max-height: 450px; }
+    .coins-pages-main .coins-pages-image .front, .coins-pages-main .coins-pages-image .reverse {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden; }
     .coins-pages-main .coins-pages-image .reverse {
       position: absolute;
       left: 0;
       top: 0;
       z-index: 99;
       display: none; }
+  .coins-pages-main .coins-pages-image:hover .front {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
   .coins-pages-main .coins-pages-image:hover .reverse {
-    display: inline; }
+    display: inline;
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg); }
   .coins-pages-main .coins-pages-text {
     padding: 12px 44px 12px 47px;
     background: rgba(196, 196, 196, 0.5);
@@ -90,16 +106,22 @@
   .coins-pages-main {
     display: -webkit-box;
     display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    flex-direction: column; }
+    display: flex; }
     .coins-pages-main .coins-pages-image {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      align-items: center;
       margin: 0 auto;
       width: 100%; }
       .coins-pages-main .coins-pages-image img {
-        width: 50%; }
+        -o-object-fit: cover;
+        object-fit: cover; }
     .coins-pages-main .coins-pages-text {
       display: -webkit-box;
       display: -webkit-flex;
