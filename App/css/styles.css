@@ -80,7 +80,7 @@
     border-collapse: collapse; }
     .coins-pages-main table tr td, .coins-pages-main table tr th {
       font-family: Roboto, sans-serif;
-      font-weight: 600;
+      font-weight: 300;
       font-size: 13px;
       line-height: 105.2%;
       padding: 10px; }
@@ -95,7 +95,7 @@
       border-top: none; }
   .coins-pages-main a {
     display: block;
-    padding-top: 163px;
+    padding-top: 50px;
     color: #833AE0;
     font-family: Roboto, sans-serif;
     font-weight: 600;
@@ -172,7 +172,8 @@
       -webkit-box-pack: justify;
       -webkit-justify-content: space-between;
       justify-content: space-between;
-      min-width: 500px; }
+      max-width: 500px;
+      max-height: 150px; }
       .container-coins .main-coins .coins-pattern .coins-img {
         position: relative; }
         .container-coins .main-coins .coins-pattern .coins-img img {

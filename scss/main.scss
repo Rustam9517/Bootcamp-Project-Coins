@@ -27,7 +27,8 @@ $font-style: Roboto,sans-serif;
       display: flex;
       width: 50%;
       justify-content: space-between;
-      min-width: 500px;
+      max-width: 500px;
+      max-height: 150px;
       .coins-img{
         position: relative;
         img{
