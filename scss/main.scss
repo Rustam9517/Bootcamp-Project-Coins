@@ -6,6 +6,9 @@ $font-style: Roboto,sans-serif;
 }
 .container-coins{
   max-width: 1080px;
+  width: 100%;
+  max-height: 720px;
+  height: 100%;
   margin: 0 auto;
   padding: 20px;
   .header-coins{
@@ -65,8 +68,7 @@ $font-style: Roboto,sans-serif;
         }
         p{
           font-weight: normal;
-          font-size: 13px;
-          line-height: 15px;
+          font-size: 10px;
           padding-bottom: 5px;
         }
         p:nth-child(2){
